@@ -4,6 +4,6 @@
     "textFont-comic": "Comic Sans",
     "textFont-arial": "Arial",
     "textFont-verdana": "Verdana",
-    "textFontLabel": "style de texte",
-    "textFontDescr": "Modifier la police utilisée"
+    "textFontLabel": "style du texte",
+    "textFontDescr": "Ajuster la police de caracteres utilisée"
 }

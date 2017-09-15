@@ -1,4 +1,6 @@
 {
-    "speakLabel": "Texte pour parler",
-    "speakDescr": "Laissez l'ordinateur lire le contenu du site à haute voix"
+    "label": "Synthèse vocale",
+    "description": "Faire l'ordinateur lire le contenu du site à haute voix",
+    "switchOn": "ACTIF",
+    "switchOff": "ÉTEINT"
 }
