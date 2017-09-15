@@ -1,0 +1,6 @@
+{
+    "label": "améliorer les intrants",
+    "description": "Mettre l'accent sur les liens, les boutons, les menus, les champs de texte et d'autres entrées",
+    "switchOn": "allumer",
+    "switchOff": "éteindre"
+}
