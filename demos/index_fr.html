@@ -58,6 +58,15 @@
 		        },
 				components: {
 					prefsEditorLoader:{
+                        // This should work according to my read of the documentation at
+                        // http://docs.fluidproject.org/infusion/development/LocalizationInThePreferencesFramework.html#specifying-a-localization
+                        // but instead it causes an error
+                        // options: {
+                        //     settings: {
+                        //         locale: "fr"
+                        //     }
+                        // },
+                        // Setting the locale directly on the message loader works 
 						options: {
 							components: {
 								messageLoader: {

@@ -20,4 +20,8 @@ Very simple demo of the localization features of the Preferences Framework.
 * It would be nice to use something other than *A* in the contrast panel for non-Latin scripts.
 * Language-specific CSS selection is well-supported: https://developer.mozilla.org/en-US/docs/Web/CSS/:lang
 * The issue is that with UIO in a frame, it takes its language-specific settings from the HTML in the frame, not the parent
-* Possible proposal: when a locale is set, UIO should add an appropriate "lang" attribute to the HTML 
+* Possible proposal: when a locale is set, UIO should add an appropriate "lang" attribute to the HTML
+
+### Possible Documentation Issue
+
+What's described at http://docs.fluidproject.org/infusion/development/LocalizationInThePreferencesFramework.html#specifying-a-localization doesn't appear to work for setting the locale; see `index_fr.html` for some further notes.
