@@ -38,13 +38,6 @@
                 source: "{that}.options.multilingualSettings.tocHeader"
             },
             locale: {
-                // Targeting this works, but results in the locale being saved
-                // and cached - not appropriate for a multilingual site!
-                // target: "{that}.options.settings.locale",
-                //
-                // For a site that can smoothly switch between different
-                // translations, we need to target the messageLoader's
-                // locale directly
                 target: "{that prefsEditorLoader}.options.components.messageLoader.options.locale",
                 source: "{that}.options.multilingualSettings.locale"
             }
