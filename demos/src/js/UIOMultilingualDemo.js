@@ -4,6 +4,11 @@
         gradeNames: ["fluid.uiOptions.prefsEditor"],
         terms: {
             "messagePrefix": "./src/messages",
+            // We need to add some additional CSS to the
+            // 'SeparatedPanelPrefsEditorFrame' template,
+            // but since we can't specify multiple template
+            // directories, we need to copy them all to our
+            // own directory
             "templatePrefix": "./src/html"
         },
         "tocTemplate": "src/js/lib/infusion/src/components/tableOfContents/html/TableOfContents.html",
@@ -13,6 +18,9 @@
         // For the distributeOptions block
         multilingualOptions: {
             locale: "en",
+            // This is necessary because the Table of Contents
+            // component doesn't use the localization messages
+            // from the panel            
             tocHeader: "Table of Contents",
             direction: "ltr"
         },
