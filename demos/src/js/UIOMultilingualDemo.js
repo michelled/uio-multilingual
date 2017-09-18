@@ -1,5 +1,7 @@
 (function ($, fluid) {
 
+    "use strict";
+
     fluid.defaults("fluid.uiOptions.prefsEditor.multilingualDemo", {
         gradeNames: ["fluid.uiOptions.prefsEditor"],
         terms: {
@@ -20,7 +22,7 @@
             locale: "en",
             // This is necessary because the Table of Contents
             // component doesn't use the localization messages
-            // from the panel            
+            // from the panel
             tocHeader: "Table of Contents",
             direction: "ltr"
         },
