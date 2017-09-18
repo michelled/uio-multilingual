@@ -1,0 +1,6 @@
+/* float open/close buttons to other side */
+@media screen and (min-width: 40em) {
+    .fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons {
+        float: left;
+    }
+}

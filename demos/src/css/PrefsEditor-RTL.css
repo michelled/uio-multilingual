@@ -1,0 +1,10 @@
+/* Flip the non-symmetrical icons */
+
+.fl-icon-line-space, .fl-icon-toc {
+    transform: rotate(180deg);
+}
+
+/* flip icon margins */
+.fl-prefsEditor .fl-icon-right, .fl-prefsEditor .fl-icon-left, .fl-prefsEditor .fl-icon-indicator, .fl-prefsEditor .fl-icon-crossout, .fl-prefsEditor .fl-icon-big-a, .fl-prefsEditor .fl-icon-small-a, .fl-prefsEditor .fl-icon-line-space-expanded, .fl-prefsEditor .fl-icon-line-space-condensed, .fl-prefsEditor .fl-icon-contrast, .fl-prefsEditor .fl-icon-undo, .fl-prefsEditor .fl-icon-line-space, .fl-prefsEditor .fl-icon-inputs, .fl-prefsEditor .fl-icon-simplify, .fl-prefsEditor .fl-icon-font, .fl-prefsEditor .fl-icon-size, .fl-prefsEditor .fl-icon-text-to-speech, .fl-prefsEditor .fl-icon-toc {
+    margin: .2em 0 0 .3em;
+}
