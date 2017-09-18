@@ -3,7 +3,8 @@
     fluid.defaults("fluid.uiOptions.prefsEditor.multilingualDemo", {
         gradeNames: ["fluid.uiOptions.prefsEditor"],
         terms: {
-            "messagePrefix": "./src/messages"
+            "messagePrefix": "./src/messages",
+            "templatePrefix": "./src/html"
         },
         "tocTemplate": "src/js/lib/infusion/src/components/tableOfContents/html/TableOfContents.html",
         "ignoreForToC": {
@@ -12,12 +13,13 @@
         // For the distributeOptions block
         multilingualOptions: {
             locale: "en",
-            tocHeader: "Table of Contents"
+            tocHeader: "Table of Contents",
+            direction: "ltr"
         },
         listeners: {
             "onPrefsEditorReady.addLanguageToMarkup": {
                 func: "fluid.uiOptions.prefsEditor.multilingualDemo.addLanguageToBody",
-                args: ["{that}", "{that}.options.multilingualOptions.locale"]
+                args: ["{that}", "{that}.options.multilingualOptions.locale", "{that}.options.multilingualOptions.direction"]
             }
         },
         distributeOptions: {
@@ -32,24 +34,11 @@
         }
     });
 
-    // Adds the locale to the BODY in the IFRAME to enable CSS selectors
-    // based on the locale
-    fluid.uiOptions.prefsEditor.multilingualDemo.addLanguageToBody = function (that, locale) {
+    // Adds the locale and direction to the BODY in the IFRAME to enable CSS
+    // based on the locale and direction
+    fluid.uiOptions.prefsEditor.multilingualDemo.addLanguageToBody = function (that, locale, direction) {
         that.prefsEditorLoader.prefsEditor.container.attr("lang", locale);
+        that.prefsEditorLoader.prefsEditor.container.attr("dir", direction);
     };
-
-    fluid.defaults("fluid.uiOptions.prefsEditor.multilingualDemo.ltr", {
-        gradeNames: ["fluid.uiOptions.prefsEditor.multilingualDemo"],
-        terms: {
-            "templatePrefix": "./src/html/ltr",
-        }
-    });
-
-    fluid.defaults("fluid.uiOptions.prefsEditor.multilingualDemo.rtl", {
-        gradeNames: ["fluid.uiOptions.prefsEditor.multilingualDemo"],
-        terms: {
-            "templatePrefix": "./src/html/rtl",
-        }
-    });
 
 })(jQuery, fluid);

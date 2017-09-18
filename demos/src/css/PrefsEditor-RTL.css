@@ -2,11 +2,11 @@
 
 /* Flip the non-symmetrical icons */
 
-.fl-icon-line-space, .fl-icon-toc {
+body[dir=rtl] .fl-icon-line-space, body[dir=rtl] .fl-icon-toc {
     transform: rotate(180deg);
 }
 
 /* flip icon margins */
-.fl-prefsEditor .fl-icon-right, .fl-prefsEditor .fl-icon-left, .fl-prefsEditor .fl-icon-indicator, .fl-prefsEditor .fl-icon-crossout, .fl-prefsEditor .fl-icon-big-a, .fl-prefsEditor .fl-icon-small-a, .fl-prefsEditor .fl-icon-line-space-expanded, .fl-prefsEditor .fl-icon-line-space-condensed, .fl-prefsEditor .fl-icon-contrast, .fl-prefsEditor .fl-icon-undo, .fl-prefsEditor .fl-icon-line-space, .fl-prefsEditor .fl-icon-inputs, .fl-prefsEditor .fl-icon-simplify, .fl-prefsEditor .fl-icon-font, .fl-prefsEditor .fl-icon-size, .fl-prefsEditor .fl-icon-text-to-speech, .fl-prefsEditor .fl-icon-toc {
+body[dir=rtl] .fl-prefsEditor .fl-icon-right, body[dir=rtl] .fl-prefsEditor .fl-icon-left, body[dir=rtl] .fl-prefsEditor .fl-icon-indicator, body[dir=rtl] .fl-prefsEditor .fl-icon-crossout, body[dir=rtl] .fl-prefsEditor .fl-icon-big-a, body[dir=rtl] .fl-prefsEditor .fl-icon-small-a, body[dir=rtl] .fl-prefsEditor .fl-icon-line-space-expanded, body[dir=rtl] .fl-prefsEditor .fl-icon-line-space-condensed, body[dir=rtl] .fl-prefsEditor .fl-icon-contrast, body[dir=rtl] .fl-prefsEditor .fl-icon-undo, body[dir=rtl] .fl-prefsEditor .fl-icon-line-space, body[dir=rtl] .fl-prefsEditor .fl-icon-inputs, body[dir=rtl] .fl-prefsEditor .fl-icon-simplify, body[dir=rtl] .fl-prefsEditor .fl-icon-font, body[dir=rtl] .fl-prefsEditor .fl-icon-size, body[dir=rtl] .fl-prefsEditor .fl-icon-text-to-speech, body[dir=rtl] .fl-prefsEditor .fl-icon-toc {
     margin: .2em 0 0 .3em;
 }

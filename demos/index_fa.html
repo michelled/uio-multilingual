@@ -56,11 +56,12 @@
 
     <script>
 		$(document).ready(function () {
-		     var uio = fluid.uiOptions.prefsEditor.multilingualDemo.rtl(".flc-prefsEditor-separatedPanel", {
+		     var uio = fluid.uiOptions.prefsEditor.multilingualDemo(".flc-prefsEditor-separatedPanel", {
                 multilingualOptions: {
                     locale: "fa",
-                    tocHeader: "فهرست مطالب"
-                }        
+                    tocHeader: "فهرست مطالب",
+                    direction: "rtl"
+                }
 		    });
 		});
 
