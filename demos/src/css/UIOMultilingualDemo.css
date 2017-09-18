@@ -10,6 +10,15 @@ h1,h2,h3,h4,h5,h6 {
     background-color: #EEEEEE;
 }
 
-body[dir=rtl] .fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons .fl-prefsEditor-reset {
+.fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons .fl-prefsEditor-reset {
+    border-right: 1px solid black;
+    padding-right: .5rem;
+    margin-right: 0;
+}
+
+html[dir=rtl] .fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons .fl-prefsEditor-reset {
     border-left: 1px solid black;
+    border-right: 0;
+    padding-right: 0;
+    margin-right: .5rem;
 }
