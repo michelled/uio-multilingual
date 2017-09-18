@@ -1,19 +1,20 @@
 # UIO Multilingual Demo
 
-Very simple demo of the localization features of the Preferences Framework.
+Simple demo of the localization features of the Preferences Framework.
 
-## Very Fast Notes
-
-### Available Languages
+## Available Languages
 
 * English
-* French (currently using Google Translate)
+* French 
 * Farsi (a right-to-left script)
+
+### Notes
 
 ### Handling right-to-left script
 
 * A very helpful Mozilla article: https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/
-* Nothing was done except to make a separate `rtl` templates folder and use `<html dir="rtl">` in `SeparatedPanelPrefsEditorFrame.html`
+* Markup - make a separate `rtl` templates folder and use `<html dir="rtl">` in `SeparatedPanelPrefsEditorFrame.html`
+* Style sheets - some elements need RTL-specific styles to work well, these are demonstrated in various `*-RTL` CSS files in `demos/src/css`
 
 ### Handling Language-Specific Styles in the Frame
 
