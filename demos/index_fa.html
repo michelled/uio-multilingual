@@ -62,6 +62,12 @@
 		        "ignoreForToC": {
 		            "overviewPanel": ".flc-overviewPanel"
 		        },
+                // TODO: has to be a better way!
+                distributeOptions: {
+                    target: "{that fluid.tableOfContents}.options.strings.tocHeader",
+                    record: "فهرست مطالب"
+
+                },
 				components: {
 					prefsEditorLoader:{
 						options: {
@@ -76,6 +82,7 @@
 					}
 				}
 		    });
+            console.log(uio)
 		});
 	</script>
     </body>
