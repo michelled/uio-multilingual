@@ -5,3 +5,12 @@ body {
 h1,h2,h3,h4,h5,h6 {
     color: #0000DD;
 }
+
+.fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons, .fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons button {
+    background-color: #EEEEEE;
+
+}
+
+.fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons .fl-prefsEditor-reset {
+    border-left: 1px solid black;
+}
