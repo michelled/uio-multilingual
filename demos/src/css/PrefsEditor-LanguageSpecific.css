@@ -1,0 +1,13 @@
+/* Language-specific styling */
+body:lang(fa) .fl-prefsEditor .fl-icon-small-a:before {
+    content: "الف";
+}
+
+body:lang(fa) .fl-prefsEditor .fl-icon-big-a:before {
+    content: "الف";
+    font-size: 150%;
+}
+
+body:lang(fa) .fl-prefsEditor .fl-choices .fl-choice .fl-preview-A:before {
+    content: "الف";
+}

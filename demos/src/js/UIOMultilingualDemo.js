@@ -14,6 +14,12 @@
             locale: "en",
             tocHeader: "Table of Contents"
         },
+        listeners: {
+            "onPrefsEditorReady.addLanguageToMarkup": {
+                func: "fluid.uiOptions.prefsEditor.multilingualDemo.addLanguageToBody",
+                args: ["{that}", "{that}.options.multilingualOptions.locale"]
+            }
+        },
         distributeOptions: {
             tocHeader: {
                 target: "{that fluid.tableOfContents}.options.strings.tocHeader",
@@ -25,6 +31,12 @@
             }
         }
     });
+
+    // Adds the locale to the BODY in the IFRAME to enable CSS selectors
+    // based on the locale
+    fluid.uiOptions.prefsEditor.multilingualDemo.addLanguageToBody = function (that, locale) {
+        that.prefsEditorLoader.prefsEditor.container.attr("lang", locale);
+    };
 
     fluid.defaults("fluid.uiOptions.prefsEditor.multilingualDemo.ltr", {
         gradeNames: ["fluid.uiOptions.prefsEditor.multilingualDemo"],
