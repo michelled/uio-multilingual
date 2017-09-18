@@ -1,28 +1,30 @@
 # UIO Multilingual Demo
 
-Simple demo of the localization features of the Preferences Framework.
+Simple demo of the localization features of the Preferences Framework and some basic support to make multilingual sites using UIO easier.
 
 ## Available Languages
 
 * English
-* French 
+* French
 * Farsi (a right-to-left script)
 
-### Notes
+### Multilingual Demo Component
+
+The `fluid.uiOptions.prefsEditor.multilingualDemo` component extends fluid.uiOptions.prefsEditor in some useful ways:
+
+* The `multilingualOptions` block lets locale, direction and the ToC heading be specified at top level, then distributes them appropriate using options distributions
+
+* The `fluid.uiOptions.prefsEditor.multilingualDemo.addLanguageAttributesToBody` function adds the `locale` and `dir` attributes to the BODY of the markup in the IFRAME when it is loaded, ensuring appropriate text direction and other language-specific behaviour, and allowing CSS selectors based on language and direction within the frame.
 
 ### Handling right-to-left script
 
 * A very helpful Mozilla article: https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/
-* Markup - make a separate `rtl` templates folder and use `<html dir="rtl">` in `SeparatedPanelPrefsEditorFrame.html`
-* Style sheets - some elements need RTL-specific styles to work well, these are demonstrated in various `*-RTL` CSS files in `demos/src/css`
+* Some elements need RTL-specific styles to work well, these are demonstrated in various `*-RTL` CSS files in `demos/src/css`
 
-### Handling Language-Specific Styles in the Frame
+### Handling language-specific styles
 
-* It would be nice to use something other than *A* in the contrast panel for non-Latin scripts.
-* Language-specific CSS selection is well-supported: https://developer.mozilla.org/en-US/docs/Web/CSS/:lang
-* The issue is that with UIO in a frame, it takes its language-specific settings from the HTML in the frame, not the parent
-* Possible proposal: when a locale is set, UIO should add an appropriate "lang" attribute to the HTML
+* Using language-specific selectors is demonstrated in `demos/src/css/PrefsEditor-LanguageSpecific.css`
 
 ### Possible Documentation Issue
 
-What's described at http://docs.fluidproject.org/infusion/development/LocalizationInThePreferencesFramework.html#specifying-a-localization doesn't appear to work for setting the locale; see `index_fr.html` for some further notes.
+What's described at http://docs.fluidproject.org/infusion/development/LocalizationInThePreferencesFramework.html#specifying-a-localization doesn't appear to work for setting the locale. It is necessary to directly address the `messageLoader` locale settings.

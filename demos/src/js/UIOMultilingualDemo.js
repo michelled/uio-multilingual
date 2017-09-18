@@ -17,8 +17,8 @@
             direction: "ltr"
         },
         listeners: {
-            "onPrefsEditorReady.addLanguageToMarkup": {
-                func: "fluid.uiOptions.prefsEditor.multilingualDemo.addLanguageToBody",
+            "onPrefsEditorReady.addLanguageAttributesToBody": {
+                func: "fluid.uiOptions.prefsEditor.multilingualDemo.addLanguageAttributesToBody",
                 args: ["{that}", "{that}.options.multilingualOptions.locale", "{that}.options.multilingualOptions.direction"]
             }
         },
@@ -36,7 +36,7 @@
 
     // Adds the locale and direction to the BODY in the IFRAME to enable CSS
     // based on the locale and direction
-    fluid.uiOptions.prefsEditor.multilingualDemo.addLanguageToBody = function (that, locale, direction) {
+    fluid.uiOptions.prefsEditor.multilingualDemo.addLanguageAttributesToBody = function (that, locale, direction) {
         that.prefsEditorLoader.prefsEditor.container.attr("lang", locale);
         that.prefsEditorLoader.prefsEditor.container.attr("dir", direction);
     };
