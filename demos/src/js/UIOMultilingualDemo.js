@@ -38,6 +38,10 @@
                 source: "{that}.options.multilingualSettings.tocHeader"
             },
             locale: {
+                // Targeting does not work
+                // target: "{that}.options.settings.locale",
+                //
+                // Targeting the messageLoader locale directly works
                 target: "{that prefsEditorLoader}.options.components.messageLoader.options.locale",
                 source: "{that}.options.multilingualSettings.locale"
             }
