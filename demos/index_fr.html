@@ -11,6 +11,9 @@
         <script src="src/js/lib/infusion/infusion-all.js">
         </script>
 
+        <script src="src/js/UIOMultilingualDemo.js">
+        </script>
+
     </head>
     <body>
 
@@ -49,43 +52,14 @@
     </ul>
 
     <script>
-		$(document).ready(function () {
-		    var uio = fluid.uiOptions.prefsEditor(".flc-prefsEditor-separatedPanel", {
-		        terms: {
-		            "templatePrefix": "./src/html/ltr",
-		            "messagePrefix": "./src/messages"
-		        },
-		        "tocTemplate": "src/js/lib/infusion/src/components/tableOfContents/html/TableOfContents.html",
-		        "ignoreForToC": {
-		            "overviewPanel": ".flc-overviewPanel"
-		        },
-                distributeOptions: {
-                    target: "{that fluid.tableOfContents}.options.strings.tocHeader",
-                    record: "Table des matières"
-                },
-				components: {
-					prefsEditorLoader:{
-                        // This should work according to my read of the documentation at
-                        // http://docs.fluidproject.org/infusion/development/LocalizationInThePreferencesFramework.html#specifying-a-localization
-                        // options: {
-                        //     settings: {
-                        //         locale: "fr"
-                        //     }
-                        // },
-                        // Setting the locale directly on the message loader works
-						options: {
-							components: {
-								messageLoader: {
-									options: {
-										locale: "fr"
-									}
-								}
-							}
-						}
-					}
-				}
-		    });
-		});
+        $(document).ready(function () {
+             fluid.uiOptions.prefsEditor.multilingualDemo.ltr(".flc-prefsEditor-separatedPanel", {
+                multilingualOptions: {
+                    locale: "fr",
+                    tocHeader: "Table des matières"
+                }
+            });
+        });
 	</script>
     </body>
 </html>

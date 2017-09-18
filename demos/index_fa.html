@@ -14,6 +14,9 @@
         <script src="src/js/lib/infusion/infusion-all.js">
         </script>
 
+        <script src="src/js/UIOMultilingualDemo.js">
+        </script>
+
     </head>
     <body>
 
@@ -53,36 +56,12 @@
 
     <script>
 		$(document).ready(function () {
-		    var uio = fluid.uiOptions.prefsEditor(".flc-prefsEditor-separatedPanel", {
-		        terms: {
-		            "templatePrefix": "./src/html/rtl",
-		            "messagePrefix": "./src/messages"
-		        },
-		        "tocTemplate": "src/js/lib/infusion/src/components/tableOfContents/html/TableOfContents.html",
-		        "ignoreForToC": {
-		            "overviewPanel": ".flc-overviewPanel"
-		        },
-                // TODO: has to be a better way!
-                distributeOptions: {
-                    target: "{that fluid.tableOfContents}.options.strings.tocHeader",
-                    record: "فهرست مطالب"
-
-                },
-				components: {
-					prefsEditorLoader:{
-						options: {
-							components: {
-								messageLoader: {
-									options: {
-										locale: "fa"
-									}
-								}
-							}
-						}
-					}
-				}
+		     fluid.uiOptions.prefsEditor.multilingualDemo.rtl(".flc-prefsEditor-separatedPanel", {
+                multilingualOptions: {
+                    locale: "fa",
+                    tocHeader: "فهرست مطالب"
+                }
 		    });
-            console.log(uio)
 		});
 	</script>
     </body>

@@ -11,6 +11,9 @@
         <script src="src/js/lib/infusion/infusion-all.js">
         </script>
 
+        <script src="src/js/UIOMultilingualDemo.js">
+        </script>
+
     </head>
     <body>
 
@@ -48,35 +51,14 @@
     </ul>
 
     <script>
-		$(document).ready(function () {
-		    var uio = fluid.uiOptions.prefsEditor(".flc-prefsEditor-separatedPanel", {
-		        terms: {
-		            "templatePrefix": "./src/html/ltr",
-		            "messagePrefix": "./src/messages"
-		        },
-		        "tocTemplate": "src/js/lib/infusion/src/components/tableOfContents/html/TableOfContents.html",
-		        "ignoreForToC": {
-		            "overviewPanel": ".flc-overviewPanel"
-		        },
-                distributeOptions: {
-                    target: "{that fluid.tableOfContents}.options.strings.tocHeader",
-                    record: "Table of Contents"
-                },
-				components: {
-					prefsEditorLoader:{
-						options: {
-							components: {
-								messageLoader: {
-									options: {
-										locale: "en"
-									}
-								}
-							}
-						}
-					}
-				}
-		    });
-		});
+    $(document).ready(function () {
+         fluid.uiOptions.prefsEditor.multilingualDemo.ltr(".flc-prefsEditor-separatedPanel", {
+            multilingualOptions: {
+                locale: "en",
+                tocHeader: "Table of Contents"
+            }
+        });
+    });
 	</script>
     </body>
 </html>
