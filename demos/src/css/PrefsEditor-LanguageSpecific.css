@@ -1,13 +1,13 @@
 /* Language-specific styling */
 body:lang(fa) .fl-prefsEditor .fl-icon-small-a:before {
-    content: "الف";
+    content: "چ";
 }
 
 body:lang(fa) .fl-prefsEditor .fl-icon-big-a:before {
-    content: "الف";
+    content: "چ";
     font-size: 200%;
 }
 
 body:lang(fa) .fl-prefsEditor .fl-choices .fl-choice .fl-preview-A:before {
-    content: "الف";
+    content: "چ";
 }
