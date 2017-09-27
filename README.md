@@ -2,6 +2,8 @@
 
 Simple demo of the localization features of the Preferences Framework and some basic support to make multilingual sites using UIO easier.
 
+The demo is viewable via Rawgit at http://rawgit.com/waharnum/uio-multilingual/master/demos/index_fa.html
+
 ## Available Languages
 
 * English
